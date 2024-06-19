@@ -8,7 +8,7 @@ import { UserModule } from './UserModule/user.module';
   imports: [
     ProfileModule,
     UserModule,
-    ContactModule
+    ///ContactModule
   ],
   controllers: [AppController],
   providers: [AppService],

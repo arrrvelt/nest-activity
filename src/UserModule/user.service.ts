@@ -1,4 +1,5 @@
 import { Injectable } from "@nestjs/common";
+import { ProfileService } from "src/ProfileModule/profile.service";
 
 @Injectable()
 export class UserService {
@@ -17,6 +18,4 @@ export class UserService {
     }
 
     async 
-
-
 }
