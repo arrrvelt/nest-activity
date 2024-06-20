@@ -1,0 +1,32 @@
+# version: '3'
+# services:
+#   development_db:
+#     image: mariadb
+#     environment:
+#       MYSQL_ROOT_PASSWORD: password
+#       MYSQL_DATABASE: my_database
+#     ports:
+#      - 3306:3306
+
+version: '3'
+services:
+  development_db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+
+    ports:
+      - 3306:3306
+  
+  # production_db:
+  #   image: mariadb
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: password
+  #     MYSQL_DATABASE: my_database
+  #     MYSQL_USER: user
+  #     MYSQL_PASSWORD: password
+  #   ports:
+  #     - "3307:3306"

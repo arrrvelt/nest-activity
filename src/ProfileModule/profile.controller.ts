@@ -8,7 +8,7 @@ export class ProfileController {
 
     @Get("profiles")
     async getProfile() {
-        return this.profileService.getProfile();
+        return this.profileService.getProfile();    
     }
 
     @Get("profile/:id")

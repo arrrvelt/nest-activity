@@ -72,3 +72,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 # node-activity
+
+
+----
+Para docker
+
+docker compose -f mariadb.docker-compose.yml up -d
