@@ -6,6 +6,8 @@ import { UserModule } from './UserModule/user.module';
 import { ContactModule } from './ContactModule/contact.module';
 import { UserModuleModule } from './user-module/user-module.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { DataSource } from 'typeorm';
+import { UserModuleEntity } from './user-module/entities/user-module.entity';
 
 @Module({
   imports: [
@@ -17,7 +19,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: 'password',
       database: 'my_database',
       entities: [UserModuleEntity],
-      synchronize: true,
+      synchronize: false,
     }),
     ProfileModule,
     UserModule,
@@ -27,4 +29,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+
+export class AppModule {
+  constructor(private dataSource: DataSource) {}
+}
